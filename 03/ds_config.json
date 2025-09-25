@@ -1,0 +1,31 @@
+{
+    "train_batch_size": "auto",
+    "train_micro_batch_size_per_gpu": "auto",
+    "gradient_accumulation_steps": "auto",
+    "fp16": {
+      "enabled": false
+    },
+    "bf16": {
+      "enabled": true
+    },
+    "zero_optimization": {
+      "stage": 2,
+      "offload_optimizer": {
+        "device": "none",
+        "pin_memory": true
+      },
+      "offload_param": {
+        "device": "none",
+        "pin_memory": true
+      },
+      "overlap_comm": true,
+      "contiguous_gradients": true
+    },
+    "gradient_clipping": "auto",
+    "steps_per_print": 200,
+    "wall_clock_breakdown": false,
+    "activation_checkpointing": {
+      "use_reentrant": false
+    }
+  }
+  
